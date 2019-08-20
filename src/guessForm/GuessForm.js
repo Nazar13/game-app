@@ -3,20 +3,17 @@ import History from '../History.js';
 const modes = ["Easy", "Medium", "Hard"];
 
 class GuessForm extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            inputedNum: 0,
-            disable: true,
-            status: false,
-            activeMode: "Easy",
-            numbers: {
-                "Easy": this.generateNumber(10),
-                "Medium": this.generateNumber(100),
-                "Hard": this.generateNumber(1000),
-            },
-            player: this.props.player,
-        }
+    state = {
+        inputedNum: 0,
+        disable: true,
+        status: false,
+        activeMode: "Easy",
+        numbers: {
+            "Easy": this.generateNumber(10),
+            "Medium": this.generateNumber(100),
+            "Hard": this.generateNumber(1000),
+        },
+        player: this.props.player,
     }
 
     inputNumHandler = (e) => {

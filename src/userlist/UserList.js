@@ -4,14 +4,11 @@ import { defaultUsers } from '../defaultUsersList.js'
 
 
 class UserList extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-          "users": defaultUsers,
-          "playerName": "Select user",
-          "currentPlayer": {}
-        };
-    }
+    state = {
+        "users": defaultUsers,
+        "playerName": "Select user",
+        "currentPlayer": {}
+    };
 
     usersList() {
         const { users } = this.state;
